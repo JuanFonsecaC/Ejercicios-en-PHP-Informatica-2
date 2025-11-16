@@ -1,37 +1,21 @@
-<?php
-$arrayr=$_GET["valor"];
-
-  function burbuja($array)
-{
-    for($i=1;$i<count($array);$i++)
-    {
-        for($j=0;$j<count($array)-$i;$j++)
-        {
-            if($array[$j]>$array[$j+1])
-            {
-                $k=$array[$j+1];
-                $array[$j+1]=$array[$j];
-                $array[$j]=$k;
-            }
-        }
-    }
- 
-    return $array;
-}
- 
-$arrayA=array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
- for ($i=0;$i<($arrayr);$i++) {
-
-  $arrayA[$i]= rand(0,100);  
-}
-echo "Valores iniciales<br>";
-for($i=0;$i<count($arrayA);$i++)
-    echo $arrayA[$i]."\n";
- 
-$arrayB=burbuja($arrayA);
- 
-echo "<br><br>Valores ordenados<br>";
-for($i=0;$i<count($arrayB);$i++)
-    echo $arrayB[$i]."\n";
-
-?>
+<form action="mostrarseis.php" method="GET" name="value">
+  Selecciona el numero deseado del 3-15:
+  <select name="valor">
+    <!-- Opciones de la lista -->
+    <option value="3">3</option>
+    <option value="4">4</option> <!-- OpciÃ³n por defecto -->
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option> <!-- OpciÃ³n por defecto -->
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option> <!-- OpciÃ³n por defecto -->
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option> <!-- OpciÃ³n por defecto -->
+    <option value="14">14</option>
+    <option value="15">15</option>
+  
+  </select>
+ <input type="submit" value="Enviar" /><br>
+</form>
